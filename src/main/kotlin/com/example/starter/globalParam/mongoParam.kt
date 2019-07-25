@@ -2,7 +2,8 @@ package com.example.starter.globalParam
 
 import com.mongodb.reactivestreams.client.MongoClients
 
-const val database:String ="test"
+//mongo database set and collection set
+const val database:String ="car"
 const val carCollection :String ="carHourCounts"
 
 /**
