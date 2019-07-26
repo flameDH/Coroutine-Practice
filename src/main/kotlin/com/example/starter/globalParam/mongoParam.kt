@@ -10,5 +10,5 @@ const val carCollection :String ="carHourCounts"
  * singleton , only one mongoClient instance in this service
  */
 object mongoClient{
-  var mongo = MongoClients.create()
+  val mongo = MongoClients.create()
 }

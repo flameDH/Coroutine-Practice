@@ -16,8 +16,8 @@ import java.time.LocalDateTime
 suspend fun addCar (carData :Car,time:LocalDateTime) {
 
   //default use localhost:27017
-  val m_mongo = MongoClients.create()
-  val collection = m_mongo.getDatabase(database).getCollection(carCollection)
+  //val m_mongo = MongoClients.create()
+  val collection =mongoClient.mongo.getDatabase(database).getCollection(carCollection)
 
   val doc=Document("brand", carData.brand).append("city", carData.city)
     .append("color", carData.color).append("time",time)
