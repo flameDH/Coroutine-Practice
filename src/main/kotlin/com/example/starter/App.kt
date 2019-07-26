@@ -26,7 +26,8 @@ class App : CoroutineVerticle() {
     //process httpbody(like form data and json data)
     router.route().handler(BodyHandler.create())
 
-    //TODO find way let router setting to single/mutiple file
+    //TODO read this https://how-to.vertx.io/web-and-openapi-howto/
+    //TODO build THE RouterFactory
     router.post("/car/add").coroutineHandler{ addCar(it) }
 
     // Start the server adn set port
