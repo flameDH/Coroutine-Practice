@@ -17,7 +17,7 @@ suspend fun addCar (carData :Car,time:LocalDateTime) {
   val collection =mongoClient.mongo.getDatabase(database).getCollection(carCollection)
 
   val doc=Document("brand", carData.brand).append("city", carData.city)
-    .append("color", carData.color).append("time",time)
+    .append("color", carData.color).append("hour",time)
 
   collection.updateOne(doc,Document("\$inc", Document("count",1)),UpdateOptions().upsert(true)).awaitFirst()
 }
