@@ -8,6 +8,7 @@ const val carCollection :String ="carHourCounts"
 
 /**
  * singleton , only one mongoClient instance in this service
+ * maybe I can setting something
  */
 object mongoClient{
   val mongo = MongoClients.create()

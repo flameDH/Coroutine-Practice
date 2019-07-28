@@ -11,7 +11,6 @@ import java.util.concurrent.TimeUnit
  */
 suspend fun init(){
 
-  //val mMongo = MongoClients.create()
   val mCollection = mongoClient.mongo.getDatabase(database).getCollection(carCollection)
   //create Index unique and create colllection
 

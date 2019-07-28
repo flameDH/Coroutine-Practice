@@ -3,7 +3,6 @@ package com.example.starter.model
 import com.example.starter.`object`.Car
 import com.example.starter.globalParam.*
 import com.mongodb.client.model.UpdateOptions
-import com.mongodb.reactivestreams.client.MongoClients
 import kotlinx.coroutines.reactive.awaitFirst
 import org.bson.Document
 import java.time.LocalDateTime
@@ -15,8 +14,6 @@ import java.time.LocalDateTime
  */
 suspend fun addCar (carData :Car,time:LocalDateTime) {
 
-  //default use localhost:27017
-  //val m_mongo = MongoClients.create()
   val collection =mongoClient.mongo.getDatabase(database).getCollection(carCollection)
 
   val doc=Document("brand", carData.brand).append("city", carData.city)
