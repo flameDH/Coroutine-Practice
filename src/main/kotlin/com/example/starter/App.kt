@@ -40,7 +40,6 @@ class App : CoroutineVerticle() {
   /**
    * An extension method for simplifying coroutines usage with Vert.x Web routers
    */
-  //TODO this part like akka , and I must to study this func
   fun Route.coroutineHandler(fn: suspend (RoutingContext) -> Unit) {
     handler { ctx ->
       launch(ctx.vertx().dispatcher()) {
