@@ -15,6 +15,18 @@
 
 執行前需確認已安裝mongoDB
 
+### api說明
+
+url:lcoalhost:9000/car/add
+
+input:
+
+    {
+      "brand":"yamaha",
+      "color":"blue",
+      "city":"taipei"
+    }
+
 ### 自行測試
 
 送出一千個需求
