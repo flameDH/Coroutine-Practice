@@ -22,7 +22,7 @@ import java.time.LocalDateTime
         //call model to save data
         addCar(carData, time)
 
-        ctx.response().setStatusCode(200).end("{\"status\":200}")
+        ctx.response().setStatusCode(400).end("{\"status\":200}")
       } catch (e: Exception) {
         println(e)
         ctx.response().setStatusCode(200).end("{\"status\": 400}")
