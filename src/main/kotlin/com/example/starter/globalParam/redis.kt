@@ -4,19 +4,21 @@ import com.example.starter.common.HOST
 import io.vertx.core.Vertx
 import io.vertx.redis.RedisClient
 import io.vertx.redis.RedisOptions
+import io.vertx.redis.client.Redis
 
 const val redisPort=7000;
 
-class redisPro{
-  companion object{
-    @Volatile private var INSTANCE: redisPro? = null
-    fun getInstance(vertx: Vertx){
-      val options = RedisOptions().setHost(HOST).setPort(redisPort)
-      val redisCli=RedisClient.create(vertx, options)
-    }
-
+object myRedis{
+  private lateinit var client:RedisClient
+  fun init(vertx: Vertx){
+    client = RedisClient.create(vertx)
+  }
+  fun get():RedisClient{
+    return client
   }
 }
+
+
 
 
 

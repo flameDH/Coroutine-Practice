@@ -2,6 +2,7 @@ package com.example.starter
 
 import com.example.starter.api.addCar
 import com.example.starter.common.PORT
+import com.example.starter.globalParam.myRedis
 import io.vertx.ext.web.Route
 import io.vertx.ext.web.Router
 import io.vertx.ext.web.RoutingContext
@@ -29,7 +30,7 @@ class App : CoroutineVerticle() {
 
     // Build Vert.x Web router
     val router= Routes(vertx).createRouter()
-
+    myRedis.init(vertx)
     // Start the server adn set port
     awaitResult<HttpServer> {
       vertx.createHttpServer()

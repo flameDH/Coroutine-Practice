@@ -8,8 +8,6 @@ import io.vertx.ext.web.Router
 import io.vertx.ext.web.handler.BodyHandler
 
 class Routes(val vertx:Vertx){
-
-
   fun createRouter():Router{
     return Router.router(vertx).apply {
       route().handler(BodyHandler.create())
