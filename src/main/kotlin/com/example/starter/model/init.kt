@@ -7,6 +7,7 @@ import org.bson.Document
 import java.util.concurrent.TimeUnit
 
 /**
+ * DDL
  * init mongodb setting (index and TTL)
  */
 suspend fun init(){
