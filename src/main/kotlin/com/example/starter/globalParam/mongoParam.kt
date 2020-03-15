@@ -1,5 +1,6 @@
 package com.example.starter.globalParam
 
+import com.example.starter.common.MONGO_CONNECTION_STTRING
 import com.mongodb.reactivestreams.client.MongoClients
 
 //mongo database set and collection set
@@ -11,5 +12,5 @@ const val carCollection :String ="carHourCounts"
  * maybe I can setting something
  */
 object mongoClient{
-  val mongo = MongoClients.create()
+  val mongo = MongoClients.create(MONGO_CONNECTION_STTRING)
 }

@@ -14,17 +14,17 @@ import org.junit.jupiter.api.extension.ExtendWith
 @ExtendWith(VertxExtension::class)
 class TestMainVerticle {
 
-  @BeforeEach
-  fun deploy_verticle(vertx: Vertx, testContext: VertxTestContext) {
-    vertx.deployVerticle(App(), testContext.succeeding<String> { _ -> testContext.completeNow() })
-  }
+//  @BeforeEach
+//  fun deploy_verticle(vertx: Vertx, testContext: VertxTestContext) {
+//    vertx.deployVerticle(App(), testContext.succeeding<String> { _ -> testContext.completeNow() })
+//  }
+//
+//  @Test
+//  fun verticle_deployed(vertx: Vertx, testContext: VertxTestContext) {
+//    testContext.completeNow()
+//  }
 
-  @Test
-  fun verticle_deployed(vertx: Vertx, testContext: VertxTestContext) {
-    testContext.completeNow()
-  }
-
-  @Test
+  /*@Test
   fun api_test(vertx: Vertx, testContext: VertxTestContext) {
     val client = WebClient.create(vertx)
     var user = json {
@@ -49,7 +49,7 @@ class TestMainVerticle {
       })
 
     testContext.completeNow()
-  }
+  }*/
 
 
 }

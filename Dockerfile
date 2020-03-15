@@ -1,9 +1,7 @@
 FROM zenika/kotlin
 MAINTAINER Alston
-ADD . /starter
+
+COPY ./target/starter-1.0.0-SNAPSHOT-fat.jar   /starter/starter-1.0.0-SNAPSHOT-fat.jar
 WORKDIR /starter
 
-
-#produce deploy ver
-RUN sh mvnw package
-ENTRYPOINT java -jar target/starter-1.0.0-SNAPSHOT.jar
+ENTRYPOINT java -jar starter-1.0.0-SNAPSHOT-fat.jar
